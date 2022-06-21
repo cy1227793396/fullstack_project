@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+                name: 'amoy',
+                hobbies: ['篮球', '学习']
+            }
+            //让 obj 不可以被改变？
+        Object.freeze(obj); //obj 浅层 不可变 依然可以添加
+        obj.name = '123'; //无效
+        obj.sex = '男'; //无效
+        obj.hobbies.unshift('音乐'); //有效
+        console.log(obj);
+    </script>
+</body>
+
+</html>

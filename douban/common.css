@@ -1,0 +1,57 @@
+/*css reset*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color: #111;
+    background: #fff;
+}
+
+body,
+td,
+th {
+    font: 12px Helvetica, Arial, sans-serif;
+    line-height: 1.62;
+}
+
+body {
+    padding-top: 30px;
+}
+/*业务样式*/
+#douban-logo{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;/*兄弟*/
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    background: url(https://img3.doubanio.com/f/sns/19886d443852bee48de2ed91f4a3bdfdaf8c809c/pics/nav/logo_db.png) no-repeat;
+    overflow: hidden;
+}
+#douban-logo a{
+    display: block;
+    line-height: 10em;
+}

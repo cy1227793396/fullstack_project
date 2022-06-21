@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            height: 200px;
+            width: 200px;
+            background-color: #ccc;
+        }
+        
+        span {
+            top: 300px;
+            width: 100px;
+            height: 150px;
+            background-color: #000;
+            position: absolute;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击之后再走</button>
+    <div class=""></div>
+    <span>111</span>
+    <script>
+        //获取当前盒子位置
+        //定时器 不断重复 移动
+        //结束定时器
+        //元素要添加定位 才能用element.style.left
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        var button = document.querySelector('button');
+        //obj 目标对象  target 目标位置
+        function animate(obj, target) {
+            //让元素只有一个定时器在运行
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer);
+                }
+                obj.style.left = obj.offsetLeft + 2 + 'px';
+            }, 30)
+        }
+        button.addEventListener('click', function() {
+            animate(span, 200);
+            animate(div, 500);
+        })
+    </script>
+</body>
+
+</html>

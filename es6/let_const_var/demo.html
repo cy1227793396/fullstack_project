@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(a); //变量的提升 提升到全局作用域的顶部去  定义提升 值不会
+        var a = 1; // 挂载在windows上 污染windows
+        console.log(pizza); //不可访问
+        const pizza = '芝士牛肉'; //const let 更好 不支持变量的提升
+        let fn = function() {
+
+            }
+            //函数也会变量提升 值也会提升
+    </script>
+</body>
+
+</html>

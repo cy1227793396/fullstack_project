@@ -1,0 +1,20 @@
+/* 标签选择器 */
+
+body {
+    background-color: cornsilk;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+div.boy {
+    background-color: black;
+}
+
+div.baymax {
+    background-color: blue;
+}

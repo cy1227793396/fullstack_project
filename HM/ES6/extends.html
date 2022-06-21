@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //类的继承
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            money() {
+                console.log(this.x + this.y);
+
+
+            }
+        }
+        class Son extends Father {
+            constructor(x, y) {
+                //constuctor 里面的this 指向创建的实例对象
+                super(x, y); //super 必须在子类this调用之前调用
+                this.x = x;
+                this.y = y;
+            }
+            substract() {
+                //函数里的this 指向调用方法的那个对象
+                console.log(this.x - this.y);
+            }
+        }
+        var son = new Son(5, 3);
+        son.substract();
+        son.money();
+        //Super 关键字调用父类的方法 就近原则
+    </script>
+</body>
+
+</html>

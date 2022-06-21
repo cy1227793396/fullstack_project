@@ -1,0 +1,29 @@
+{
+    "posts": [{
+            "id": 1,
+            "title": "c++很牛逼",
+            "author": "李子园"
+        },
+        {
+            "id": 2,
+            "title": "event loop",
+            "author": "离子源"
+        }
+    ],
+    "comments": [{
+            "id": 1,
+            "body": "真棒",
+            "postId": 1
+        },
+        {
+            "id": 2,
+            "body": "全能",
+            "postId": 2
+        },
+        {
+            "id": 3,
+            "body": "学到了"
+
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .warp {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+        
+        table {
+            border: 1px solid black;
+            width: 300px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 1px solid gray;
+            color: black;
+            padding: 10px;
+        }
+        
+        th {
+            background-color: #0099cc;
+            font: bold 16px;
+            color: #fff;
+        }
+        
+        td {
+            font: 14px;
+        }
+        
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+        
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp">
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="j_cbaAll"></th>
+                    <th>商品</th>
+                    <th>价格</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <td>iphone11</td>
+                        <td>8000</td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <td>ipid pro</td>
+                        <td>10000</td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <td>apple watch</td>
+                        <td>5000</td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <td>ipid air</td>
+                        <td>2000</td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //1全选/取消 让下面的复选框跟随全选
+        var j_cbaAll = document.getElementById('j_cbaAll');
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        j_cbaAll.onclick = function() {
+                for (let i = 0; i < j_tbs.length; i++) {
+                    j_tbs[i].checked = this.checked;
+                }
+            }
+            //2给下面的复选框全部绑定点击事件 每次点击都循环查看是否所以复选框都被选中
+            //3可以设定一个变量 来控制是否全中
+        for (let i = 0; i < j_tbs.length; i++) {
+            j_tbs[i].onclick = function() {
+                let flag = true; //控制按钮是否被全选
+                for (let i = 0; i < j_tbs.length; i++) {
+                    if (!j_tbs[i].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                j_cbaAll.checked = flag;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

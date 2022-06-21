@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //前端 数据在json文件中 通过fetch 去和后端通信
+        fetch('http://localhost:3000/posts').then(data => data.json()).then(data => {
+            document.getElementById('posts')
+                .innerHTML = data.map(post => `
+            <li>
+                ${post.id} ${post.title} ${post.author}
+            </li>    
+            `).join('');
+
+        })
+    </script>
+</body>
+
+</html>

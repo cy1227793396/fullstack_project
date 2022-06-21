@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两列式布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .page {
+            padding: 0 15px;
+        }
+        
+        .page>div:last-child {
+            margin-bottom: 0;
+        }
+        
+        .header,
+        .nav,
+        .main,
+        .footer {
+            height: 150px;
+            background-color: green;
+            text-align: center;
+            margin-bottom: 10px;
+            line-height: 150px;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .main {
+            /*两列式布局
+            开启弹性布局
+            */
+            display: flex;
+        }
+        
+        .aside {
+            width: 300px;
+            background-color: blue;
+        }
+        
+        .aticle {
+            flex: 1;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">header</div>
+        <div class="nav">nav</div>
+        <div class="main">
+            <div class="aticle">aticle</div>
+            <div class="aside">aside</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

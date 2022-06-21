@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>1</li>
+        <li>22</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+    <script>
+        //闭包应用3秒之后 打印li的内容
+        var lis = document.querySelector('.nav').querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    console.log(lis[i].innerHTML);
+
+                }, 3000)
+            })(i)
+        }
+    </script>
+</body>
+
+</html>

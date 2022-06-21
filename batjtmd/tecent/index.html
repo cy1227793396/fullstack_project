@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯日</title>
+</head>
+
+<body>
+    <script>
+        // const choir = [];
+        //console.log(typeof choir);
+        /**
+         * @func 组建1000只鸭子的合唱团
+         */
+        let cat = {
+            sing() {
+                console.log('喵喵喵');
+
+            }
+        }
+        let chick = {
+            sing() {
+                console.log('嘎嘎嘎');
+
+            }
+        }
+        let duck = {
+            sing() {
+                console.log('嘎嘎嘎');
+
+            }
+        }
+        const choir = [];
+
+        function bulidChior(animal) {
+            if (animal.sing && typeof animal.sing == 'function') {
+                choir.push(animal);
+            }
+
+        }
+        for (let i = 0; i < 1000; i++) {
+            bulidChior(duck);
+        }
+
+
+        if (choir.length >= 1000) {
+            console.log('完成招募了啊啊');
+
+        }
+    </script>
+</body>
+
+</html>

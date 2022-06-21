@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送花</title>
+</head>
+
+<body>
+
+    <script>
+        // chrome 最快的浏览器 
+           // 浏览器 上网代理 ， 运行页面时， js 的宿主环境 
+           // 作用域  
+          
+        function func() {    
+            let c = 3;  // 局部变量 
+              
+        }   // 全局变量 
+           // 变量名  地址的映射 属于运行环境的作用域 
+           // 空间大小 决定了吧？ 整数空间 
+          
+        let d; // undefined   没有值， 类型未定义， 空间起始地址有，
+           //  空间大小未定义
+          
+        var a = 1; // var es5 及之前 js 变量常量声明的关键字 
+          
+        let b = 2; // es6 2015 之后提供的 let const 
+           // const name = "熊淦";
+           // let age = 19;
+           // const hometown = "南昌";
+           // const sex = '男'
+           // 除了简单数据类型之外的 一切都是对象 
+           // 对象 字面量 
+          
+        /*
+         *  函数名大写， 类的构造函数
+         */
+           // class Flower {
+           //     constructor() {
+
+           //     }
+           // } 
+           // 类的构造函数
+          
+        function Flower(type, num) {     // 指针
+                 // this 指向构造函数运行时的对象
+                
+            console.log(this)  ;  
+            this.type = type;    
+            this.num = num;  
+        }   // 构造对象时就指向哪个
+          
+        const ych = new Flower('油菜花', 1);  
+        console.log(ych.type);
+
+          
+        const rose = new Flower('玫瑰花', 11);  
+        console.log(rose.type, rose.num);  
+        const obj = {    
+            name: '熊淦',
+                age: 19,
+                hometown: '南昌',
+                sex: '男'  
+        };   // 对象字面量  talk in js   
+          
+        const hjh = {    
+                name: '华君豪',
+                    age: 20,
+                    hometown: '九江',
+                    sex: '男',
+                    isSingle: true,
+                    gf: null,
+                    work_status: undefined,
+                     // 参数 
+                    sendFlower(target) {       // this 属于函数
+                           // this 指向对象
+                          
+                    const flower = new Flower('红玫瑰', 99);       // console.log(this);
+                           // let xx = 1;
+                           // xiaomei
+                           // console.log(target)
+                           // 送花代码 ?
+                           // target 类型是对象， 对象上有sendFlower 方法 
+                          
+                    target.receiveFlower(this, flower);    
+                }     // null  undefined 
+                  
+            }   // 送花，  
+               // 对象由哪两部分组成？ 属性， 方法
+               // 女主角 
+               // [] 数组 {} 对象 
+              
+        const xiaomei = {    
+            name: '小美',
+                age: 18,
+        }
