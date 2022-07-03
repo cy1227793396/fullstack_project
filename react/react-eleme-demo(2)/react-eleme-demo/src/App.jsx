@@ -1,15 +1,17 @@
-import { lazy, useState } from 'react'
-import { useRoutes } from 'react-router'
+import { useState, Suspense } from 'react'
 import './App.css'
-import routes from './routes'
-const Header=lazy(()=>import('./components/Header'))
-const Footer=lazy(()=>import('./components/Footer'))
+import Header from './components/Header'
+import Footer from './components/Footer'
+import RoutesConfig from './routes'
+
 function App() {
-const element=useRoutes(routes)
+
   return (
     <div className="App">
       <Header/>
-      {element}
+      <Suspense fallback={<div>loading...</div>}>
+        <RoutesConfig />
+      </Suspense>
       <Footer/>
     </div>
   )
